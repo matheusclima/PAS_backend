@@ -7,7 +7,10 @@ dotenv.config();
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  const allowedOrigins = [process.env.ALLOWED_URL];
+  const allowedOrigins = [
+    'https://pas-frontend-pearl.vercel.app/',
+    'https://pas-frontend-pearl.vercel.app',
+  ];
 
   app.enableCors({
     origin: allowedOrigins,
